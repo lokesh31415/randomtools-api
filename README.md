@@ -81,3 +81,17 @@ RandomTools API repo
 3. Install a package
 
    `apt-get install <PACKAGE_NAME>`
+
+4. Remove a package
+
+   `sudo apt --purge remove <PACKAGE_NAME>`
+
+5. Mkdir to create a directory even if parent(s) does not exist.
+
+   `sudo mkdir -p /var/www/html/randomtools`
+
+6. To list all the jobs to bring it to foreground / to terminate those.
+
+   `jobs`
+   `fg <JOB_ID>`
+   `kill $<JOB_ID>`
