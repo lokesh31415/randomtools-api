@@ -1,0 +1,11 @@
+{
+  "file_uploaded": "File '{}' was uploaded successfully.",
+  "invalid_extension": "Extension '{}' is not allowed.",
+  "compress_invalid_extension": "Invalid file extension '{}' for compression.",
+  "compress_success": "File '{}' was compressed successfully.",
+  "compress_failed": "Compression failed !, please try again.",
+  "internal_server_error": "Internal server error !, please try again after sometime.",
+  "illegal_filename": "Illegal file name '{}' passed in the request.",
+  "file_not_found": "File '{}' not found.",
+  "file_deleted": "File '{}' was deleted successfully."
+}
