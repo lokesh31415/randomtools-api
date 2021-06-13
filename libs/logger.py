@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 
 default_path = os.environ.get("RAND_LOG_PATH", "logs")
-_filename = "randlog.txt"
+_filename = "randlog.log"
 _enable_print = os.environ.get("RAND_LOGPRINT_ENABLE", "y") == "y"
 
 # private functions
