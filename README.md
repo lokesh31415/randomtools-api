@@ -68,6 +68,19 @@ RandomTools API repo
 
     `docker push randomtools/randomtools-api:latest`
 
+13. Create an container with custom linux user.
+
+    ```
+    FROM ubuntu:latest
+    RUN apt-get -y update
+    RUN groupadd -r user && useradd -m -g user -u 3333 loki
+    USER loki
+    ```
+
+14. Open bash terminal with particular user.
+
+    `docker exec -it --user root <CONTAINER_ID> bash`
+
 > ### Linux bash (Ubuntu)
 
 1. Check the shadow file if root user has hashed password
@@ -93,5 +106,13 @@ RandomTools API repo
 6. To list all the jobs to bring it to foreground / to terminate those.
 
    `jobs`
+
    `fg <JOB_ID>`
+
    `kill $<JOB_ID>`
+
+7. Adding new variable to path.
+
+   `export PATH=/some/new/path:$PATH`
+
+   `export PATH=$PATH:/some/new/path`

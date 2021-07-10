@@ -9,6 +9,7 @@ make sure to call libs.strings.refresh() to use the load the newly mentioned fil
 
 """
 import json
+import os
 
 default_locale = 'en-gb'
 cached_strings = {}
@@ -16,7 +17,8 @@ cached_strings = {}
 def refresh():
     """ Loads the json file from the given path and caches it's content. """
     global cached_strings
-    with open(f"strings/{default_locale}.json") as file:
+    curr_dir = os.getcwd()
+    with open(f"{curr_dir}/strings/{default_locale}.json") as file:
         cached_strings = json.load(file)
 
 def gettext(name:str) -> str:
