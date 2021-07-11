@@ -1,0 +1,12 @@
+[Unit]
+Description=uWSGI randomtools
+
+[Service]
+ExecStart=/var/www/html/randomtools/venv/bin/uwsgi --master --emperor /var/www/html/randomtools/uwsgi.ini --die-on-term --uid loki --gid loki --logto /var/www/html/randomtools/logs/emperor.log
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
