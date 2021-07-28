@@ -1,0 +1,12 @@
+[Unit]
+Description=uWSGI randomtools
+
+[Service]
+ExecStart=/usr/local/bin/uwsgi --master --emperor /var/www/html/randomtools/production/docker/uwsgi.ini --die-on-term --uid root --gid root --logto /var/www/html/randomtools/logs/emperor.log
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target

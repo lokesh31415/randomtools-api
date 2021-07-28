@@ -116,3 +116,19 @@ RandomTools API repo
    `export PATH=/some/new/path:$PATH`
 
    `export PATH=$PATH:/some/new/path`
+
+> ### Heroku Container deployment
+
+1. Buld, push and deploy an docker image on heroku
+
+   `heroku container:push web -a randomtools`
+
+   `heroku container:release web -a randomtools`
+
+2. To view heroku container logs
+
+   `heroku logs --tail -a randomtools`
+
+3. To run bash session on a heroku container
+
+   `heroku run bash -a randomtools`
